@@ -1,3 +1,5 @@
+// I don't need to do anything to the template, because it's just an as-is input interface.
+
 const template = document.createElement('template');
 template.innerHTML = `
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
@@ -55,6 +57,17 @@ class ResourceFilters extends HTMLElement {
   connectedCallback() {
     this.render();
   }
+
+ // Handle:
+
+  // call/bind the functions below as necessary (e.g. in constructor, connectedCallback, disconnectedCallback, etc.)
+
+  // - clicking categories
+  //      - change click state of category button
+
+  // - clicking submit
+  //      - build an object to hold the filter state
+  //      - create & fire a custom event that fires with that information
 
   render() {
     this.shadowRoot.appendChild(template.content.cloneNode(true));
