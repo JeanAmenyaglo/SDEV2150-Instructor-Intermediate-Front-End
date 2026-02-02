@@ -99,7 +99,7 @@ class ResourceFilters extends HTMLElement {
 
     const searchQuery = this.shadowRoot.querySelector('#q').value.trim();
     // Getting the category requires a few steps of work: find group -> find active button -> find its text value
-    const categoryGroup = this.shadowRoot.querySelector('aria-label="Category filters"') // aria-label is its uniquely identifying attribute
+    const categoryGroup = this.shadowRoot.querySelector('[aria-label="Category filters"]') // aria-label is its uniquely identifying attribute
     const categoryButton = categoryGroup.querySelector('.active') || categoryGroup.querySelector('button');
     const category = categoryButton ? categoryButton.textContent.trim().toLowerCase() : 'all' // default to all if no selected button
     const openNow = this.shadowRoot.querySelector('#openNow').checked;
